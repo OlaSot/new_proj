@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  /* Backgrounds */
+  --color-bg: #F7F7F7;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #F7F7F7;
+
+  /* Borders */
+  --color-border: #F2F2F2;
+  --color-border-soft: #E3E3E3;
+
+  /* Text */
+  --color-text: #000000;
+  --color-text-secondary: #B8B8B8;
+
+  /* Primary */
+  --color-primary: #A05035;
+  --color-primary-hover: #8A422B;
+
+  /* Graphite */
+  --color-graphite: #383838;
+
+--color-slot-fill: #EDEDED;
+--color-slot-stroke: #D8D8D8;
+
+
+}
+
+/* Tailwind v4 theme tokens */
+@theme {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+
+  --color-border: var(--color-border);
+  --color-border-soft: var(--color-border-soft);
+
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+
+  --color-graphite: var(--color-graphite);
+  
+--color-slot-fill: var(--color-slot-fill);
+--color-slot-stroke: var(--color-slot-stroke);
+
+
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main), Arial, Helvetica, sans-serif;
+}
