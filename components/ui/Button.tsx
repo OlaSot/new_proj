@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ReactNode } from "react";
 import clsx from "clsx";
 
-type ButtonVariant = "primary" | "outlineDark" | "secondaryLight";
+type ButtonVariant = "primary" | "outlineDark" | "secondaryLight" | "outlinePill";
 type ButtonSize = "lg" | "md" | "sm";
 
 type CommonProps = {
@@ -72,6 +72,7 @@ export function Button(props: ButtonAsLink | ButtonAsButton) {
       "border border-white/70 bg-transparent text-white hover:bg-white hover:text-graphite",
     secondaryLight:
       "bg-[#F7F7F7] text-[#1f1f1f] border border-[#E3E3E3] hover:bg-black/[0.03]",
+      outlinePill: "rounded-full border border-black/20 bg-transparent hover:bg-black/5",
   };
 
   const width = fullWidth
