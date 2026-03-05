@@ -28,7 +28,10 @@ export function ConceptDetailPage({ slug }: Props) {
     { src: "/images/banner.png", alt: "Banner" },
     { src: "/images/banner.png", alt: "Banner" },
   ];
-const gallery = (concept as any).gallery as { src: string; alt?: string }[] | undefined;
+const gallery =
+  "gallery" in concept
+    ? (concept as { gallery?: { src: string; alt?: string }[] }).gallery
+    : undefined;
 
 const images = (gallery?.length ? gallery : fallbackGallery).map((i) => ({
   src: i.src,

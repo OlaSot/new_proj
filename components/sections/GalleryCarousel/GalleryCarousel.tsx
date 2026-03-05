@@ -100,7 +100,7 @@ export function GalleryCarousel({
                 <div className="relative h-[100svh] w-full">
                   <Image
                     src={img.src}
-                    alt={img.alt}
+                    alt={img.alt ?? "Gallery image"}
                     fill
                     priority={idx === 0}
                     className="object-cover"
@@ -174,7 +174,7 @@ export function GalleryCarousel({
                       <span className="relative block h-full w-full overflow-hidden rounded-[12px]">
                         <Image
                           src={img.src}
-                          alt={img.alt}
+                          alt={img.alt ?? "Gallery image"}
                           fill
                           className="object-cover"
                           sizes="160px"
