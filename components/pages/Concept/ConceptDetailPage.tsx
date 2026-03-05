@@ -28,11 +28,12 @@ export function ConceptDetailPage({ slug }: Props) {
     { src: "/images/banner.png", alt: "Banner" },
     { src: "/images/banner.png", alt: "Banner" },
   ];
+const gallery = (concept as any).gallery as { src: string; alt?: string }[] | undefined;
 
-  const images = (concept.gallery?.length ? concept.gallery : fallbackGallery).map(
-    (i) => ({ src: i.src, alt: i.alt }),
-  );
-
+const images = (gallery?.length ? gallery : fallbackGallery).map((i) => ({
+  src: i.src,
+  alt: i.alt,
+}));
   const finishingIntroText =
     "Концепция Modern Loft создана для молодых профессионалов, IT-специалистов, креативных предпринимателей и всех, кто ценит открытое пространство с брутальными материалами и современным комфортом. Идеально подходит IT-фрилансерам, которым нужна интегрированная рабочая зона в общей гостиной, молодым парам без детей, предпочитающим просторную кухню-гостиную со спальней на галерее, а также креативным личностям, любящим акцентные кирпичные стены, металл, бетон и индустриальные светильники. Инвесторам в премиум-аренду стиль даёт среднюю ставку на 25% выше стандартных квартир.";
 
